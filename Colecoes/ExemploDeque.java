@@ -1,4 +1,4 @@
-package Colecoes;
+package colecoes;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.LinkedList;

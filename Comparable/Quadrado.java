@@ -1,4 +1,4 @@
-package Atividade02;
+package comparable;
 
 public class Quadrado extends FormaBidimensional {
     private double lado;

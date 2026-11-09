@@ -1,4 +1,4 @@
-package Atividade02;
+package comparable;
 
 public class Esfera extends FormaTridimensional {
     private double raio;

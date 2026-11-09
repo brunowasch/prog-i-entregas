@@ -1,4 +1,4 @@
-package Atividade02;
+package comparable;
 
 public class Triangulo extends FormaBidimensional {
     private double base;

@@ -1,4 +1,4 @@
-package Atividade02;
+package comparable;
 
 public class Tetraedro extends FormaTridimensional {
     private double lado;

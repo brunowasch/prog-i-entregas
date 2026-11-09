@@ -1,4 +1,4 @@
-package Atividade02;
+package comparable;
 
 public class Circulo extends FormaBidimensional {
     private double raio;

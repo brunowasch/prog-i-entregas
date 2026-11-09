@@ -1,4 +1,4 @@
-package Atividade02;
+package comparable;
 
 public abstract class Forma implements Comparable<Forma> {
     public abstract double obterArea();
