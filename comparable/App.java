@@ -1,23 +1,31 @@
 package comparable;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class App {
     public static void main(String[] args) {
-        Forma circulo = new Circulo(10.0);
-        Forma quadrado = new Quadrado(10.0);
+        ArrayList<Forma> formas = new ArrayList<>();
+        formas.add(new Circulo(10.0));
+        formas.add(new Quadrado(10.0));
+        formas.add(new Triangulo(10.0, 8.0));
+        formas.add(new Esfera(5.0));
+        formas.add(new Cubo(6.0));
+        formas.add(new Tetraedro(8.0));
 
-        System.out.println("Círculo = " + circulo.obterArea());
-        System.out.println("Quadrado = " + quadrado.obterArea());
+        Collections.sort(formas);
+        System.out.println("Formas em ordem crescente de área:");
+        imprimirFormas(formas);
 
-        switch(quadrado.compareTo(circulo)) {
-            case -1:
-                System.out.println("Sou menor que a outra forma.");
-                break;
-            case 1:
-                System.out.println("Sou maior que a outra forma.");
-                break;
-            default:
-                System.out.println("As duas formas têm o mesmo tamanho.");
-                break;
+        formas.sort(Collections.reverseOrder());
+        System.out.println("\nFormas em ordem decrescente de área:");
+        imprimirFormas(formas);
+    }
+
+    private static void imprimirFormas(ArrayList<Forma> formas) {
+        for (Forma forma : formas) {
+            System.out.printf("%s: área = %.2f%n",
+                    forma.getClass().getSimpleName(), forma.obterArea());
         }
     }
 }
